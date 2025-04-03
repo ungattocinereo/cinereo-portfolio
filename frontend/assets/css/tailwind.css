@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+  }
+  /* You might want to add other base styles here */
+}
+
+@layer components {
+  .title-header {
+    @apply font-black text-left text-transparent text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-12; /* Removed font-raleway */
+    font-family: 'Raleway', sans-serif; /* Added standard CSS */
+    -webkit-text-stroke-color: #182bf4;
+    /* Mobile-first stroke width */
+    -webkit-text-stroke-width: 2px;
+  }
+  /* Apply wider stroke on medium screens and up */
+  @screen md {
+    .title-header {
+      -webkit-text-stroke-width: 3px;
+    }
+  }
+}
