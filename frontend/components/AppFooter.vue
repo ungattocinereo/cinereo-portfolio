@@ -29,25 +29,25 @@
           <h3 class="text-xl font-raleway font-bold mb-4">Services</h3>
           <ul class="space-y-2 font-nunito">
             <li>
-              <NuxtLink to="/services" class="text-gray-300 hover:text-white transition flex items-center">
+              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Web Development
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/services" class="text-gray-300 hover:text-white transition flex items-center">
+              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Photography
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/services" class="text-gray-300 hover:text-white transition flex items-center">
+              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Graphic Design
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/services" class="text-gray-300 hover:text-white transition flex items-center">
+              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Hospitality Consulting
               </NuxtLink>
@@ -102,7 +102,7 @@
             </li>
             <li class="flex items-start">
               <Mail class="w-5 h-5 mr-2 mt-0.5 text-[#3e87f8]" />
-              <a href="mailto:info@cinereo.it" class="text-gray-300 hover:text-white transition">info@cinereo.it</a>
+              <a href="mailto:hello@cinereo.it" class="text-gray-300 hover:text-white transition">hello@cinereo.it</a>
             </li>
             <li class="flex items-start">
               <MessageCircle class="w-5 h-5 mr-2 mt-0.5 text-[#3e87f8]" />
@@ -115,7 +115,7 @@
       <!-- Footer Bottom Section -->
       <div class="pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
         <p class="text-gray-400 font-nunito text-sm mb-4 md:mb-0">
-          &copy; {{ new Date().getFullYear() }} Cinereo. All rights reserved.
+          © 2006–2025 Gregory 'Cinereo' Smirnov. All rights reserved.
         </p>
         <div class="flex flex-wrap justify-center gap-4 text-sm font-nunito">
           <NuxtLink to="/privacy-policy" class="text-gray-400 hover:text-white transition">Privacy Policy</NuxtLink>
@@ -128,7 +128,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue'; // Added onBeforeUnmount
 import {
   Linkedin,
   Instagram,
@@ -138,8 +138,8 @@ import {
   Mail,
   MessageCircle
 } from 'lucide-vue-next';
-import { tsParticles } from "@tsparticles/engine";
-import { loadFull } from "tsparticles"; // Required for loading the full particles engine
+
+// We'll load tsParticles dynamically in onMounted
 
 // Particle configuration options
 const particlesOptions = ref({
@@ -204,11 +204,73 @@ const particlesOptions = ref({
 
 // Initialize particles on the client side after the component is mounted
 onMounted(async () => {
-  await loadFull(tsParticles); // Load all features
+  // Ensure this runs only on the client
+  if (process.client) {
+    try {
+      // Add a small delay to ensure the DOM is fully rendered
+      setTimeout(async () => {
+        try {
+          // Import the required modules with explicit paths
+          const engineModule = await import("@tsparticles/engine");
+          const tsParticles = engineModule.tsParticles;
+          
+          const tsparticlesModule = await import("tsparticles");
+          const loadFull = tsparticlesModule.loadFull;
+          
+          // Initialize the engine
+          await loadFull(tsParticles);
+          
+          // Check if the container exists
+          const container = document.getElementById("footer-particles");
+          if (!container) {
+            console.error("Footer particles container not found in DOM");
+            return;
+          }
+          
+          // Load the particles configuration
+          const particlesInstance = await tsParticles.load({
+            id: "footer-particles", // ID of the container div
+            options: particlesOptions.value,
+          });
+          
+          if (particlesInstance) {
+            console.log("Footer particles initialized successfully");
+          } else {
+            console.error("Failed to initialize footer particles: No instance returned");
+          }
+        } catch (innerError) {
+          console.error("Failed to initialize footer particles in setTimeout:", innerError);
+        }
+      }, 500); // 500ms delay
+    } catch (error) {
+      console.error("Failed to initialize footer particles:", error);
+    }
+  }
+});
 
-  await tsParticles.load({
-    id: "footer-particles", // ID of the container div
-    options: particlesOptions.value,
-  });
+// Cleanup particles on component unmount
+onBeforeUnmount(async () => {
+  if (process.client) {
+    try {
+      // Import the engine to access the particles instance
+      const engineModule = await import("@tsparticles/engine");
+      const tsParticles = engineModule.tsParticles;
+      
+      // Find the specific tsparticles instance by its container ID
+      const instances = tsParticles.dom();
+      if (instances) {
+        const instance = instances.find(i => i.id === "footer-particles");
+        if (instance) {
+          // Destroy the instance to free up resources
+          await instance.destroy();
+          console.log("Footer particles instance destroyed successfully");
+        } else {
+          console.log("No footer particles instance found to destroy");
+        }
+      }
+    } catch (error) {
+      console.error("Failed to cleanup footer particles:", error);
+    }
+  }
 });
 </script>

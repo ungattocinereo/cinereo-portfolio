@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="relative py-24 md:py-32 bg-gradient-to-r from-[#162cf1] to-[#3e87f8] text-white"> <!-- Restored original padding -->
-      <!-- Particle Container -->
-      <div id="hero-particles" class="absolute inset-0 z-0"></div>
-      <div class="container mx-auto px-4 text-center relative z-10"> <!-- Add relative z-10 to content -->
+    <section class="relative h-screen flex items-center justify-center bg-[url('/images/bg-hero-cinereo.webp')] bg-cover bg-bottom text-white before:absolute before:inset-0 before:z-0 dark:before:bg-black/20"> <!-- Added flex centering, removed padding -->
+      <!-- Particle Container with explicit z-index -->
+      <div id="hero-particles" class="absolute inset-0 z-0" style="z-index: 0;"></div>
+      <div class="container mx-auto px-4 text-center relative z-10" style="z-index: 10;"> <!-- Add explicit z-index -->
         <div class="mx-auto">
           <div class="relative">
             <!-- Creative text as a separate div positioned relative to the container -->
@@ -13,7 +13,7 @@
             </div>
             
             <!-- Main heading text -->
-            <h1 class="relative text-4xl md:text-5xl lg:text-6xl font-raleway font-black mb-4 leading-tight pt-24 md:pt-10 z-10">
+            <h1 class="relative text-4xl md:text-5xl lg:text-6xl font-raleway font-black mb-4 leading-tight pt-24 md:pt-20 z-10"> <!-- Increased desktop top padding -->
               Solutions for Digital Presence
             </h1>
           </div>
@@ -43,33 +43,31 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- QR Concierge Project -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
-            <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-              <QrCode class="w-16 h-16 text-[#003dff] dark:text-[#3e87f8]" />
-            </div>
+          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            <NuxtLink to="/portfolio/qcierge">
+              <img src="/images/mockup-qrcierge.jpg" alt="QR Concierge Mockup" class="w-full h-48 object-cover" />
+            </NuxtLink>
             <div class="p-6">
               <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">QR Concierge</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito">
                 Digital concierge system using QR codes for hotels and tourism businesses.
               </p>
-              <a href="https://qr.amalfi.day" target="_blank" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
-                <ExternalLink class="w-4 h-4 mr-1" />
+              <NuxtLink to="/portfolio/qcierge" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+                <ExternalLink class="w-4 h-4 mr-1" /> <!-- Consider changing icon if it's now an internal link -->
                 Visit Project
-              </a>
+              </NuxtLink>
             </div>
           </div>
           
           <!-- WordPress Sites Project -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
-            <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-              <Globe class="w-16 h-16 text-[#003dff] dark:text-[#3e87f8]" />
-            </div>
+          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            <img src="/images/mockup-websites.jpg" alt="Tourism Websites Mockup" class="w-full h-48 object-cover" />
             <div class="p-6">
               <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">Tourism Websites</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito">
                 Collection of WordPress sites for tourism and local businesses on the Amalfi Coast.
               </p>
-              <a href="https://amalfi.day" target="_blank" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+              <a href="#" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
                 <ExternalLink class="w-4 h-4 mr-1" />
                 Visit Project
               </a>
@@ -77,19 +75,17 @@
           </div>
           
           <!-- Interior Photography Project -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
-            <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-              <Camera class="w-16 h-16 text-[#003dff] dark:text-[#3e87f8]" />
-            </div>
+          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            <img src="/images/interior-photo.jpg" alt="Interior Photography Example" class="w-full h-48 object-cover" />
             <div class="p-6">
               <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">Interior Photography</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito">
                 Professional photography for hotels, villas, and restaurants on the Amalfi Coast.
               </p>
-              <NuxtLink to="/portfolio" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+              <a href="#" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
                 <Image class="w-4 h-4 mr-1" />
                 View Gallery
-              </NuxtLink>
+              </a>
             </div>
           </div>
         </div>
@@ -104,7 +100,33 @@
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Current Work Section -->
+    <section class="py-16 bg-gray-100 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <h2 class="title-header">Current</h2>
+
+        <p class="text-2xl md:text-3xl font-nunito font-bold text-left text-gray-800 dark:text-gray-200 max-w-3xl mb-4">
+          I’m personally crafting each of these sites right now — real projects with real traffic.
+        </p>
+        <p class="text-base md:text-lg font-nunito text-left text-gray-600 dark:text-gray-400 max-w-2xl mb-12">
+          Here’s a look at some of the projects I’m currently working on—each one built with care and purpose.
+        </p>
+
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <a href="https://amalfi.day" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-[#121826] rounded-full w-[255px] h-[85px] flex items-center justify-center transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+            <Amalfiday2Logo class="h-[3.3rem] text-[#2B3339] dark:text-gray-300 relative -top-1" />
+          </a>
+          <a href="https://atrani.ru" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-[#121826] rounded-full w-[255px] h-[85px] flex items-center justify-center transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+            <AtraniruLogo class="h-8 text-[#2B3339] dark:text-gray-300" />
+          </a>
+          <a href="https://alextione.it" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-[#121826] rounded-full w-[255px] h-[85px] flex items-center justify-center transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+            <AlextioneLogo class="h-8 text-[#2B3339] dark:text-gray-300" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
     <section class="py-16 bg-gray-100 dark:bg-gray-800">
       <div class="container mx-auto px-4">
         <h2 class="title-header">Skills</h2>
@@ -166,17 +188,19 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Blog Post 1 -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-              <FileText class="w-16 h-16 text-gray-400 dark:text-gray-500" />
-            </div>
+          <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <NuxtLink to="/blog/this-website-was-written-by-voice">
+              <div class="h-48 bg-gray-200 dark:bg-gray-700 rounded-t-lg flex items-center justify-center">
+                <Lightbulb class="w-40 h-40 text-[#1436f5] pointer-events-none" />
+              </div>
+            </NuxtLink>
             <div class="p-6">
-              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2 font-nunito">March 31, 2025</div>
-              <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">My First Blog Post</h3>
+              <div class="text-sm text-gray-500 dark:text-gray-400 mb-2 font-nunito">April 4, 2025</div>
+              <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">This Website Was Written by Voice</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito line-clamp-3">
-                An introduction to my professional journey and the launch of this portfolio website.
+                Discover how this website was built entirely using voice commands and AI, a journey from WordPress to a modern, lightweight solution.
               </p>
-              <NuxtLink to="/blog/my-first-blog-post" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+              <NuxtLink to="/blog/this-website-was-written-by-voice" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
                 <BookOpen class="w-4 h-4 mr-1" />
                 Read Article
               </NuxtLink>
@@ -184,17 +208,19 @@
           </div>
           
           <!-- Blog Post 2 -->
-          <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg">
-            <div class="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-              <FileText class="w-16 h-16 text-gray-400 dark:text-gray-500" />
-            </div>
+          <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <NuxtLink to="/blog/voice-test-post">
+              <div class="h-48 bg-gray-200 dark:bg-gray-700 rounded-t-lg flex items-center justify-center">
+                <Mic class="w-40 h-40 text-[#1436f5] pointer-events-none" />
+              </div>
+            </NuxtLink>
             <div class="p-6">
               <div class="text-sm text-gray-500 dark:text-gray-400 mb-2 font-nunito">March 31, 2025</div>
-              <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">Another Interesting Article</h3>
+              <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">Testing the Waters: My First Voice-Powered Post</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito line-clamp-3">
-                Exploring the intersection of technology and hospitality in the modern tourism industry.
+                A test blog post created using voice commands and AI assistance.
               </p>
-              <NuxtLink to="/blog/another-interesting-article" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+              <NuxtLink to="/blog/voice-test-post" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
                 <BookOpen class="w-4 h-4 mr-1" />
                 Read Article
               </NuxtLink>
@@ -239,8 +265,8 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import {
   Briefcase,
   MessageCircle,
-  QrCode,
-  Globe,
+  // QrCode, // Removed unused import
+  // Globe,  // Removed unused import
   Camera,
   ExternalLink,
   Image,
@@ -249,12 +275,17 @@ import {
   Code,
   Palette,
   Hotel,
-  FileText,
+  Lightbulb, // Added for blog post 1
+  Mic,       // Added for blog post 2
   BookOpen
 } from 'lucide-vue-next';
-import { tsParticles } from "@tsparticles/engine";
-import { loadFull } from "tsparticles";
-// Removed import for @tsparticles/path-svg - trying auto-load via loadFull
+
+// We'll load tsParticles dynamically in onMounted
+
+// Import Current Work Logos
+import Amalfiday2Logo from '~/components/logos/Amalfiday2Logo.vue'; // Import new logo
+import AtraniruLogo from '~/components/logos/AtraniruLogo.vue';
+import AlextioneLogo from '~/components/logos/AlextioneLogo.vue';
 
 // Particle configuration for Hero Section
 const heroParticlesOptions = ref({
@@ -371,25 +402,70 @@ const heroParticlesOptions = ref({
 // Initialize particles on the client side after the component is mounted
 onMounted(async () => {
   // Ensure this runs only on the client
-  if (typeof window !== 'undefined') {
-    await loadFull(tsParticles);
-    // Removed addPathGenerator - trying auto-load via loadFull
+  if (process.client) {
+    try {
+      // Access the globally provided tsParticles instance from the plugin
+      const nuxtApp = useNuxtApp();
+      const tsParticles = nuxtApp.$tsParticles;
 
-    await tsParticles.load({
-      id: "hero-particles", // ID of the new container div
-      options: heroParticlesOptions.value,
-    });
+      if (!tsParticles) {
+        console.error("tsParticles instance not available from plugin.");
+        return;
+      }
+
+      // Check if the container exists
+      const container = document.getElementById("hero-particles");
+      if (!container) {
+        console.error("Particles container not found in DOM");
+        return;
+      }
+
+      // Load the particles configuration using the global instance
+      const particlesInstance = await tsParticles.load({
+        id: "hero-particles", // ID of the container div
+        options: heroParticlesOptions.value,
+      });
+
+      if (particlesInstance) {
+        console.log("Particles initialized successfully using plugin instance", particlesInstance);
+      } else {
+        console.error("Failed to initialize particles: No instance returned");
+      }
+    } catch (error) {
+      console.error("Failed to initialize particles:", error);
+    }
   }
 });
 
 // Cleanup particles on component unmount
-onBeforeUnmount(() => {
-  if (typeof window !== 'undefined') {
-    // Find the specific tsparticles instance by its container ID
-    const instance = tsParticles.dom().find(i => i.id === "hero-particles");
-    if (instance) {
-      // Destroy the instance to free up resources
-      instance.destroy();
+onBeforeUnmount(async () => {
+  if (process.client) {
+    try {
+      // Access the globally provided tsParticles instance from the plugin
+      const nuxtApp = useNuxtApp();
+      const tsParticles = nuxtApp.$tsParticles;
+
+      if (!tsParticles) {
+        console.error("tsParticles instance not available for cleanup.");
+        return;
+      }
+
+      // Find the specific tsparticles instance by its container ID
+      const instances = tsParticles.dom(); // Get all instances managed by the engine
+      if (instances) {
+        const instance = instances.find(i => i.id === "hero-particles");
+        if (instance) {
+          // Destroy the instance to free up resources
+          await instance.destroy();
+          console.log("Particles instance destroyed successfully");
+        } else {
+          console.log("No particles instance found with ID 'hero-particles' to destroy");
+        }
+      } else {
+        console.log("No particles instances found in the DOM to destroy");
+      }
+    } catch (error) {
+      console.error("Failed to cleanup particles:", error);
     }
   }
 });

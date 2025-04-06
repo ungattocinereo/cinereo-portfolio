@@ -7,7 +7,27 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
   }
-  /* You might want to add other base styles here */
+  
+  /* Ensure backdrop-filter works across browsers */
+  .backdrop-blur-md, .backdrop-filter {
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  
+  /* Ensure background opacity works */
+  .bg-white\/75 {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+  }
+  
+  .dark .dark\:bg-gray-900\/75 {
+    background-color: rgba(17, 24, 39, 0.75) !important;
+  }
+  
+  /* Ensure the header has the correct stacking context for backdrop-filter */
+  header {
+    isolation: isolate;
+    will-change: backdrop-filter, background-color;
+  }
 }
 
 @layer components {
@@ -23,5 +43,30 @@
     .title-header {
       -webkit-text-stroke-width: 3px;
     }
+  }
+}
+
+/* Additional utilities that won't be purged */
+@layer utilities {
+  .backdrop-blur-md {
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  
+  .backdrop-filter {
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  
+  .-webkit-backdrop-filter {
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+  
+  .bg-white\/75 {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+  }
+  
+  .dark .dark\:bg-gray-900\/75 {
+    background-color: rgba(17, 24, 39, 0.75) !important;
   }
 }

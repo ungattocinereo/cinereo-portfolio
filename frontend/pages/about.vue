@@ -2,19 +2,19 @@
   <div class="container mx-auto px-4 py-8">
 
     <!-- Hero Section -->
-    <section class="relative flex flex-col md:flex-row items-center mb-24 md:mb-32">
+    <section class="relative flex flex-col md:flex-row items-center mb-24 md:mb-32" style="margin-top: 7vh;">
       <!-- Text Content -->
-      <div class="md:w-2/3 relative z-10 mb-8 md:mb-0 md:pr-8">
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-raleway font-black text-blue-700 mb-4 -ml-1 md:-ml-2" style="line-height: 0.9;">Gregory<br>Smirnov</h1>
+      <div class="md:w-1/2 relative z-10 mb-8 md:mb-0 md:pr-8">
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-raleway font-black mb-4 -ml-1 md:-ml-2" style="line-height: 0.9; color: #1436f5;">Gregory<br>Smirnov</h1>
         <p class="text-lg md:text-xl text-gray-700 font-nunito mt-6 max-w-md">
           Photographer, graphic and video designer based in Amalfi Coast, Italy. Master of communication in EnoGastronomy.
         </p>
       </div>
       <!-- Image with Hover Effect -->
-      <div class="md:w-1/2 md:absolute md:right-0 md:top-0 md:h-full flex items-center justify-center md:justify-end perspective-1000">
+      <div class="md:w-1/2 flex items-center justify-center md:justify-end perspective-1000">
         <img
           ref="heroImage"
-          src="/images/about/gregory-smirnov.jpg"
+          src="/images/new-profile-pic.jpg"
           alt="Gregory Smirnov"
           class="rounded-lg shadow-lg w-full max-w-lg md:max-w-none md:h-auto transition-transform duration-300 ease-out"
           @mousemove="handleMouseMove"
@@ -30,36 +30,47 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div>
           <div class="relative pt-1">
-             <div class="text-2xl font-bold text-blue-700 mb-2">100%</div>
-             <h4 class="text-lg font-raleway font-bold mb-2">I speak 🪆 Russian</h4>
-             <p class="text-gray-600 font-nunito text-sm">I speak it perfectly with even some slang variations for central and south regions of Russia.</p>
+             <div class="text-6xl font-raleway font-black text-blue-700 mb-2">100%</div>
+             <h4 class="text-xl font-raleway font-bold mb-3 flex items-center justify-center">
+               <Globe class="inline-block mr-2" :size="24" style="color: #1436f5;" /> I speak Russian
+             </h4>
+             <p class="text-gray-600 font-nunito text-base">I speak it perfectly with even some slang variations for central and south regions of Russia.</p>
           </div>
         </div>
          <div>
           <div class="relative pt-1">
-             <div class="text-2xl font-bold text-pink-500 mb-2">99%</div>
-             <h4 class="text-lg font-raleway font-bold mb-2">I speak 🏈 English</h4>
-             <p class="text-gray-600 font-nunito text-sm">Use it basically to learn everything I know right now. From books to YouTube videos and tv shows.</p>
+             <div class="text-6xl font-raleway font-black text-pink-500 mb-2">99%</div>
+              <h4 class="text-xl font-raleway font-bold mb-3 flex items-center justify-center">
+                <MessageSquare class="inline-block mr-2" :size="24" style="color: #1436f5;" /> I speak English
+              </h4>
+             <p class="text-gray-600 font-nunito text-base">Use it basically to learn everything I know right now. From books to YouTube videos and tv shows.</p>
           </div>
         </div>
          <div>
           <div class="relative pt-1">
-             <div class="text-2xl font-bold text-gray-700 mb-2">95%</div>
-             <h4 class="text-lg font-raleway font-bold mb-2">Parlo 🍝 Italiano</h4>
-             <p class="text-gray-600 font-nunito text-sm">Ho imparato per trasferirmi in Italia. Tengo un certificato B2 rilasciato dal Università Roma Tre in 2016.</p>
+             <div class="text-6xl font-raleway font-black text-gray-700 mb-2">95%</div>
+              <h4 class="text-xl font-raleway font-bold mb-3 flex items-center justify-center">
+                <Pizza class="inline-block mr-2" :size="24" style="color: #1436f5;" /> Parlo Italiano
+              </h4>
+             <p class="text-gray-600 font-nunito text-base">Ho imparato per trasferirmi in Italia. Tengo un certificato B2 rilasciato dal Università Roma Tre in 2016.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="mb-16 bg-gray-100 p-8 rounded-lg">
-       <div class="flex flex-col md:flex-row">
-         <div class="md:w-1/2 md:pr-8">
-            <h5 class="text-gray-500 font-raleway font-semibold mb-2">Gregory Smirnov</h5>
-            <h2 class="text-4xl font-raleway font-black mb-4">Graphic design has been my prior passion.</h2>
+    <section class="mb-16 bg-white py-16 px-8 rounded-lg">
+       <div class="flex flex-col md:flex-row items-center">
+         <!-- Image Column (Moved Left) -->
+         <div class="md:w-1/2 md:pr-12 mb-8 md:mb-0 flex justify-center">
+            <img src="/images/about/gregory-avatar.jpg" alt="Design Skills" class="rounded-full shadow-md object-cover h-64 w-64 md:h-80 md:w-80">
+         </div>
+         <!-- Text Column (Moved Right) -->
+         <div class="md:w-1/2">
+            <h5 class="text-gray-500 font-raleway font-semibold mb-4 border border-gray-300 rounded-[10px] p-2 inline-block">Gregory Smirnov</h5>
+            <h2 class="text-4xl font-raleway font-black mb-4">Design was my first creative passion — and it led me to everything else.</h2>
             <p class="text-gray-700 font-nunito mb-8">
-              I never stopped to learn more. I know photography all my life. I learnt video filmmaking, editing, web design and so on. Always trying to express myself in best and more brilliant way possible.
+              I’ve lived and breathed photography for as long as I can remember. Along the way, I explored video, editing, web design, and more — always driven by the same goal: to express ideas in the most meaningful and visually powerful way possible.
             </p>
             <div class="space-y-4">
               <SkillProgressBar skill="Print design" percentage="96" color="bg-gradient-to-r from-blue-600 to-pink-500" />
@@ -69,10 +80,7 @@
               <SkillProgressBar skill="Web Design" percentage="86" color="bg-gradient-to-r from-blue-600 to-pink-500" />
             </div>
          </div>
-          <div class="md:w-1/2 mt-8 md:mt-0">
-             <img src="/images/about/gregory-avatar.jpg" alt="Design Skills" class="rounded-lg shadow-md object-cover h-full w-full">
-          </div>
-       </div>
+      </div>
     </section>
 
     <!-- Photo Equipment Section -->
@@ -136,7 +144,7 @@
 
     <!-- Contact Section -->
     <section class="mb-16">
-       <h2 class="text-3xl font-raleway font-bold text-center mb-8">Contact Me</h2>
+       <h2 class="title-header" style="background-image: none; color: #1436f5;">Contact</h2>
        <div class="flex flex-col md:flex-row">
           <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
              <!-- Placeholder for Map - Implement using a library like Leaflet or Mapbox if needed -->
@@ -145,18 +153,14 @@
              </div>
           </div>
           <div class="md:w-1/2">
-             <p class="text-gray-700 font-nunito mb-6">
+             <p class="text-gray-700 font-nunito mb-6 text-xl font-light">
                 Currently, I'm focused on my new project, dedicated to the food & wine of the Campania region of Italy. You can find me on the Amalfi Coast, in Ravello or Atrani. If you have an interesting project, don't hesitate to write to me directly.
              </p>
              <h5 class="text-lg font-raleway font-bold mb-2">Write or call me</h5>
              <p class="text-gray-700 font-nunito mb-6">
-                E-mail: <a href="mailto:gregory@cinereo.it" class="text-blue-600 hover:underline">gregory@cinereo.it</a><br>
+                E-mail: <a href="mailto:hello@cinereo.it" class="text-blue-600 hover:underline">hello@cinereo.it</a><br>
                 Telegram: <a href="http://t.me/cinereo" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">cinereo</a>
              </p>
-             <!-- Contact Form Placeholder - Implement using a form library or service -->
-             <div class="bg-gray-100 p-4 rounded-lg text-center text-gray-500">
-                Contact Form Placeholder
-             </div>
           </div>
        </div>
     </section>
@@ -166,6 +170,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { Globe, MessageSquare, Pizza } from 'lucide-vue-next';
 
 // --- Hero Image Tilt Effect ---
 const heroImage = ref(null);

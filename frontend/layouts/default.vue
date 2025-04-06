@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col min-h-screen" :class="{ 'dark': isDark }">
+  <div class="flex flex-col min-h-screen">
     <!-- Navigation Bar - Sticky with conditional background -->
-    <header :class="headerClasses" class="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 transition-all duration-300"> <!-- Restored sticky, removed container/margin/styles -->
+    <header :class="headerClasses" class="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 transition-all duration-300"> <!-- Removed static backdrop-filter -->
       <!-- Container back inside nav -->
       <nav class="container mx-auto px-4 py-3 flex justify-between items-center"> <!-- Restored container/padding -->
         <!-- Logo on the left -->
@@ -65,6 +65,10 @@
             >
               <Send class="w-4 h-4" />
             </a>
+            <!-- Divider -->
+            <div class="hidden md:block h-4 border-l border-gray-300 dark:border-gray-700"></div>
+            <!-- Theme Toggle Component -->
+            <ThemeToggle />
           </div>
         </div>
       </nav>
@@ -86,6 +90,7 @@
 // Import Lucid icons
 import { BriefcaseBusiness, ScrollText, Cat, Linkedin, Instagram, Send } from 'lucide-vue-next';
 import { ref, onMounted, onUnmounted, computed } from 'vue';
+import ThemeToggle from '~/components/ThemeToggle.vue'; // Import ThemeToggle
 
 // Import logo component
 import LogoCinereo from '~/components/logos/logo-cinereo.svg?component';
@@ -93,28 +98,13 @@ import LogoCinereo from '~/components/logos/logo-cinereo.svg?component';
 // Import AppFooter component
 import AppFooter from '~/components/AppFooter.vue';
 
-// Detect dark mode based on system preferences
-const isDark = ref(false);
-
-// Initialize dark mode on client side
-onMounted(() => {
-  // Check if user prefers dark mode
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    isDark.value = true;
-  }
-  
-  // Listen for changes in system color scheme preference
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    isDark.value = event.matches;
-  });
-});
-
 // Navbar scroll behavior
 const scrollY = ref(0);
 const isScrolled = computed(() => scrollY.value > 0); // Trigger effect immediately on scroll
 
 const handleScroll = () => {
   scrollY.value = window.scrollY;
+  // console.log('Layout: handleScroll executed, scrollY:', scrollY.value); // <-- Remove log
 };
 
 onMounted(() => {
@@ -126,11 +116,15 @@ onUnmounted(() => {
 });
 
 const headerClasses = computed(() => {
-  // Restore conditional classes based on scroll
-  return {
-    'bg-white/75 dark:bg-gray-900/75 backdrop-blur-md shadow-sm': isScrolled.value,
-    'bg-transparent dark:bg-gray-900': !isScrolled.value, // Apply dark bg even when not scrolled
-  };
+  // Explicit classes for better compatibility
+  let classes = '';
+  if (isScrolled.value) {
+    classes = 'bg-white/75 dark:bg-gray-900/75 backdrop-blur-md backdrop-filter -webkit-backdrop-filter shadow-sm';
+  } else {
+    classes = 'bg-transparent dark:bg-gray-900'; // Apply dark bg even when not scrolled
+  }
+  // console.log('Layout: headerClasses computed, isScrolled:', isScrolled.value, 'classes:', classes); // <-- Remove log
+  return classes;
 });
 </script>
 
@@ -157,5 +151,35 @@ body {
 /* Active link styles */
 .router-link-active {
   font-weight: 500;
+}
+
+/* Explicit backdrop-filter styles for better browser compatibility */
+.backdrop-blur-md {
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.backdrop-filter {
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.-webkit-backdrop-filter {
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Explicit background opacity styles */
+.bg-white\/75 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.dark .dark\:bg-gray-900\/75 {
+  background-color: rgba(17, 24, 39, 0.75) !important;
+}
+
+/* Ensure the header has the correct stacking context for backdrop-filter */
+header {
+  isolation: isolate;
+  will-change: backdrop-filter, background-color;
 }
 </style>
