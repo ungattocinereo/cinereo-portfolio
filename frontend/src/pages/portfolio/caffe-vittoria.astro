@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DefaultLayout from '../../layouts/default.vue';
+import CaffeVittoriaPage from './_caffe-vittoria.vue';
+---
+
+<Layout title="Caffe Vittoria - Cinereo Portfolio">
+  <DefaultLayout client:load>
+    <CaffeVittoriaPage client:load />
+  </DefaultLayout>
+</Layout>

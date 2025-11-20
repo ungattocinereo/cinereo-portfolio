@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DefaultLayout from '../../layouts/default.vue';
+import QciergePage from './_qcierge.vue';
+---
+
+<Layout title="QR Concierge - Cinereo Portfolio">
+  <DefaultLayout client:load>
+    <QciergePage client:load />
+  </DefaultLayout>
+</Layout>

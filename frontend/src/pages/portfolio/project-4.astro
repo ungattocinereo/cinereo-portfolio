@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DefaultLayout from '../../layouts/default.vue';
+import Project4Page from './_project-4.vue';
+---
+
+<Layout title="Le Palme - Cinereo Portfolio">
+  <DefaultLayout client:load>
+    <Project4Page client:load />
+  </DefaultLayout>
+</Layout>

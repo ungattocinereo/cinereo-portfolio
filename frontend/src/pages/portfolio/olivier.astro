@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DefaultLayout from '../../layouts/default.vue';
+import OlivierPage from './_olivier.vue';
+---
+
+<Layout title="Olivier - Cinereo Portfolio">
+  <DefaultLayout client:load>
+    <OlivierPage client:load />
+  </DefaultLayout>
+</Layout>

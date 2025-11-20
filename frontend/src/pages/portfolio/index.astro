@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DefaultLayout from '../../layouts/default.vue';
+import PortfolioIndexPage from './_index.vue';
+---
+
+<Layout title="Portfolio - Cinereo">
+  <DefaultLayout client:load>
+    <PortfolioIndexPage client:load />
+  </DefaultLayout>
+</Layout>
