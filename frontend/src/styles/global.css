@@ -6,18 +6,34 @@
 }
 
 @layer base {
-  /* Set default font for body */
   body {
     font-family: var(--font-nunito);
   }
 
-  /* Set heading font */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-raleway);
   }
 }
 
-/* Utility classes if you still need them explicitly */
+/* Global component classes */
+@layer components {
+  .title-header {
+    @apply text-6xl sm:text-7xl md:text-8xl font-black mb-12 font-raleway;
+    color: transparent;
+    -webkit-text-stroke: 2px #293036; /* Default dark stroke */
+  }
+
+  .dark .title-header {
+    -webkit-text-stroke: 2px white; /* Light stroke for dark mode */
+  }
+  
+  /* Variant with blue stroke if needed */
+  .title-header-blue {
+    -webkit-text-stroke: 2px #1436f5;
+  }
+}
+
+/* Utility classes */
 .font-raleway {
   font-family: var(--font-raleway);
 }
