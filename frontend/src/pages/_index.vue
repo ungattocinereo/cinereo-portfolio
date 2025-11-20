@@ -289,7 +289,7 @@ import AlextioneLogo from '~/components/logos/AlextioneLogo.vue';
 
 <style>
 /* Import Raleway and Nunito fonts */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Nunito:wght@400;500;700&display=swap');
+/* Import moved to Layout.astro */
 
 .font-raleway {
   font-family: 'Raleway', sans-serif;

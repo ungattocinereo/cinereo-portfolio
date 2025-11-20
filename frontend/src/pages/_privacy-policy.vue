@@ -37,7 +37,7 @@
               Tipi di Dati Raccolti
             </h2>
             <p class="text-gray-700 dark:text-gray-300">Fra i Dati Personali raccolti da questo Sito Web, in modo autonomo o tramite terze parti, ci possono essere:</p>
-            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300">
+            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li><strong>Dati di Navigazione:</strong> Dettagli tecnici come indirizzi IP, tipo di browser, orari di accesso, ecc., raccolti automaticamente per il funzionamento del sito e per statistiche anonime.</li>
               <li><strong>Dati forniti volontariamente dall'utente:</strong> Informazioni come nome, email, ecc., inviate tramite form di contatto o email per rispondere alle richieste.</li>
               <li><strong>Cookie:</strong> Piccoli file di testo usati per il funzionamento del sito e potenzialmente per analisi. Consulta la Cookie Policy (se disponibile) per dettagli.</li>
@@ -50,7 +50,7 @@
               Finalità e Base Giuridica del Trattamento
             </h2>
             <p class="text-gray-700 dark:text-gray-300">I Dati sono trattati per:</p>
-            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300">
+            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li><strong>Fornire il Servizio e rispondere alle richieste:</strong> Base giuridica: esecuzione contratto/misure precontrattuali (GDPR Art. 6.1.b).</li>
               <li><strong>Statistica e analisi (anonima):</strong> Base giuridica: legittimo interesse (GDPR Art. 6.1.f) o consenso (GDPR Art. 6.1.a).</li>
               <li><strong>Adempiere obblighi di legge:</strong> Base giuridica: obbligo legale (GDPR Art. 6.1.c).</li>
@@ -62,9 +62,9 @@
             <h2 id="modalita-luogo-heading" class="text-2xl font-semibold font-raleway text-gray-800 dark:text-gray-100 mb-5 border-b pb-2 border-gray-200 dark:border-gray-700">
               Modalità e Luogo del Trattamento
             </h2>
-            <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200">Modalità di trattamento</h3>
+            <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mt-5 mb-2">Modalità di trattamento</h3>
             <p class="text-gray-700 dark:text-gray-300">Adottiamo misure di sicurezza adeguate (GDPR Art. 32). Il trattamento avviene con strumenti informatici da personale autorizzato o responsabili esterni nominati (GDPR Art. 28).</p>
-            <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mt-4">Luogo</h3>
+            <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mt-5 mb-2">Luogo</h3>
             <p class="text-gray-700 dark:text-gray-300">I Dati sono trattati presso le sedi del Titolare e altri luoghi indicati. Possibili trasferimenti extra-UE avvengono con garanzie adeguate (es. clausole standard).</p>
           </section>
 
@@ -73,7 +73,7 @@
               Periodo di Conservazione
             </h2>
             <p class="text-gray-700 dark:text-gray-300">Conserviamo i dati per il tempo necessario alle finalità:</p>
-            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300">
+            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>Dati contrattuali: fino al termine del contratto.</li>
               <li>Dati per legittimo interesse: fino al soddisfacimento dell'interesse.</li>
               <li>Dati basati sul consenso: fino a revoca del consenso.</li>
@@ -87,7 +87,7 @@
               Diritti dell’Utente (GDPR Art. 15-22)
             </h2>
             <p class="text-gray-700 dark:text-gray-300">Hai il diritto di:</p>
-            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300">
+            <ul class="list-disc list-outside space-y-2 pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>Accedere ai tuoi dati.</li>
               <li>Rettificare dati inesatti.</li>
               <li>Cancellare i dati ("oblio").</li>
@@ -97,7 +97,7 @@
               <li>Revocare il consenso.</li>
               <li>Proporre reclamo al Garante Privacy (www.garanteprivacy.it).</li>
             </ul>
-            <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mt-4">Come esercitare i diritti</h3>
+            <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mt-5 mb-2">Come esercitare i diritti</h3>
             <p class="text-gray-700 dark:text-gray-300">Contatta il Titolare usando l'email fornita sopra. Le richieste sono gratuite ed evase entro un mese.</p>
           </section>
 
@@ -115,6 +115,8 @@
 </template>
 
 <script setup>
+import { useHead } from '@unhead/vue';
+
 useHead({
   title: 'Privacy Policy - CristallPont S.R.L.',
   meta: [
@@ -122,17 +124,3 @@ useHead({
   ]
 })
 </script>
-
-<style scoped>
-/* Rimuoviamo le classi prose globali e applichiamo stili specifici */
-/* Eventuali stili aggiuntivi possono essere inseriti qui se necessario */
-section h2 {
-  @apply mb-4; /* Aggiunge spazio sotto i titoli h2 */
-}
-section h3 {
-   @apply mt-5 mb-2; /* Aggiunge spazio sopra e sotto i titoli h3 */
-}
-ul {
-  @apply mb-4; /* Aggiunge spazio sotto le liste */
-}
-</style>

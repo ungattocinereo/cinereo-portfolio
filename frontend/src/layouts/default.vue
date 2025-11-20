@@ -129,8 +129,7 @@ const headerClasses = computed(() => {
 </script>
 
 <style>
-/* Import Nunito font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+/* Font import moved to Layout.astro for performance and CSS order correctness */
 
 /* Global styles */
 body {
