@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  --font-raleway: 'Raleway', sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
+}
+
+@layer base {
+  /* Set default font for body */
+  body {
+    font-family: var(--font-nunito);
+  }
+
+  /* Set heading font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-raleway);
+  }
+}
+
+/* Utility classes if you still need them explicitly */
+.font-raleway {
+  font-family: var(--font-raleway);
+}
+
+.font-nunito {
+  font-family: var(--font-nunito);
+}
