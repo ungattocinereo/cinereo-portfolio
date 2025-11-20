@@ -76,13 +76,7 @@
 </template>
 
 <script setup>
-// No script logic needed for this static page yet
-useHead({
-  title: 'Terms of Service - Cinereo',
-  meta: [
-    { name: 'description', content: 'Terms of Service for the Cinereo.it website.' }
-  ]
-})
+// useHead removed, handled by Layout.astro
 </script>
 
 <style scoped>

@@ -171,7 +171,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Globe, MessageSquare, Pizza } from 'lucide-vue-next';
-import { useHead } from '@unhead/vue'; // Import useHead
 
 // --- Hero Image Tilt Effect ---
 const heroImage = ref(null);
@@ -251,12 +250,7 @@ const SoftwareCard = {
 // Define components for use in the template (though not explicitly needed in <script setup>)
 const components = { SkillProgressBar, EquipmentCard, SoftwareCard };
 
-useHead({
-  title: 'About - Cinereo',
-  meta: [
-    { name: 'description', content: 'Gregory Smirnov: Photographer, graphic and video designer based in Amalfi Coast, Italy. Master of communication in EnoGastronomy.' }
-  ]
-})
+// useHead removed, handled by Layout.astro
 </script>
 
 <style scoped>

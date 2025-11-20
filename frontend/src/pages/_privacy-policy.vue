@@ -115,12 +115,5 @@
 </template>
 
 <script setup>
-import { useHead } from '@unhead/vue';
-
-useHead({
-  title: 'Privacy Policy - CristallPont S.R.L.',
-  meta: [
-    { name: 'description', content: 'Informativa sulla privacy dettagliata per il sito web di CristallPont S.R.L., in conformità con GDPR e normativa italiana.' }
-  ]
-})
+// useHead removed, handled by Layout.astro
 </script>

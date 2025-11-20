@@ -82,14 +82,6 @@
 
 <script setup>
 import { ChevronRight, ExternalLink } from 'lucide-vue-next';
-import { useHead } from '@unhead/vue';
-
-useHead({
-  title: 'Sitemap - Cinereo',
-  meta: [
-    { name: 'description', content: 'Sitemap of Cinereo.it website.' }
-  ]
-})
 
 // Define the site structure
 const mainPages = [
