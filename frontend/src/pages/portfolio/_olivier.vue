@@ -96,13 +96,13 @@
         <section>
            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
              <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-1-2.jpg')" class="block group cursor-pointer">
-               <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-1-2.jpg" alt="Olivier Menu Mockup 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:33vw" />
+               <img src="/images/portfolio/olivier/menu-olivier-2017-1-2.jpg" alt="Olivier Menu Mockup 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
              </a>
              <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-3.jpg')" class="block group cursor-pointer">
-               <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-3.jpg" alt="Olivier Menu Mockup 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:33vw" />
+               <img src="/images/portfolio/olivier/menu-olivier-2017-3.jpg" alt="Olivier Menu Mockup 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
              </a>
              <a @click.prevent="toggleZoom('/images/portfolio/olivier/oliver-new-menu-22.jpg')" class="block group cursor-pointer">
-               <NuxtImg src="/images/portfolio/olivier/oliver-new-menu-22.jpg" alt="Olivier Menu Mockup 3" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:33vw" />
+               <img src="/images/portfolio/olivier/oliver-new-menu-22.jpg" alt="Olivier Menu Mockup 3" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
              </a>
            </div>
         </section>
@@ -111,10 +111,10 @@
         <section class="bg-[#444349] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12 rounded-lg shadow-inner">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
              <a @click.prevent="toggleZoom('/images/portfolio/olivier/olivier-wip-1.jpg')" class="block group cursor-pointer">
-               <NuxtImg src="/images/portfolio/olivier/olivier-wip-1.jpg" alt="Olivier Menu Work in Progress 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:50vw" />
+               <img src="/images/portfolio/olivier/olivier-wip-1.jpg" alt="Olivier Menu Work in Progress 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
              </a>
              <a @click.prevent="toggleZoom('/images/portfolio/olivier/types-menu-olivier-2017.jpg')" class="block group cursor-pointer">
-               <NuxtImg src="/images/portfolio/olivier/types-menu-olivier-2017.jpg" alt="Olivier Menu Types" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:50vw" />
+               <img src="/images/portfolio/olivier/types-menu-olivier-2017.jpg" alt="Olivier Menu Types" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
              </a>
           </div>
         </section>
@@ -138,12 +138,10 @@
             </div>
           </div>
           <div class="w-full md:w-2/3">
-            <NuxtImg
+            <img
               src="/images/portfolio/olivier/summer-menu-2.jpg"
               alt="Olivier Seasonal Summer Menu"
               class="w-full h-auto rounded-lg shadow-xl"
-              sizes="100vw md:67vw"
-              format="webp"
               loading="lazy"
             />
           </div>
@@ -156,16 +154,16 @@
     <section class="bg-gray-800 dark:bg-black py-12 md:py-16 lg:py-20 shadow-inner">
       <div class="container mx-auto px-4 md:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-eng-1.jpg')" class="block group cursor-pointer">
-          <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-eng-1.jpg" alt="Olivier Menu English Page 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw sm:50vw lg:25vw" />
+          <img src="/images/portfolio/olivier/menu-olivier-2017-eng-1.jpg" alt="Olivier Menu English Page 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-eng-2.jpg')" class="block group cursor-pointer">
-          <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-eng-2.jpg" alt="Olivier Menu English Page 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw sm:50vw lg:25vw" />
+          <img src="/images/portfolio/olivier/menu-olivier-2017-eng-2.jpg" alt="Olivier Menu English Page 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-4.jpg')" class="block group cursor-pointer">
-          <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-4.jpg" alt="Olivier Menu Russian Page 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw sm:50vw lg:25vw" />
+          <img src="/images/portfolio/olivier/menu-olivier-2017-4.jpg" alt="Olivier Menu Russian Page 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
         <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-5.jpg')" class="block group cursor-pointer">
-          <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-5.jpg" alt="Olivier Menu Russian Page 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw sm:50vw lg:25vw" />
+          <img src="/images/portfolio/olivier/menu-olivier-2017-5.jpg" alt="Olivier Menu Russian Page 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
         </a>
       </div>
     </section>
@@ -178,23 +176,23 @@
       <section> <!-- Section 6 -->
          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
            <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-1-2.jpg')" class="block group cursor-pointer">
-             <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-1-2.jpg" alt="Olivier Menu Mockup 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:33vw" />
+             <img src="/images/portfolio/olivier/menu-olivier-2017-1-2.jpg" alt="Olivier Menu Mockup 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
            </a>
            <a @click.prevent="toggleZoom('/images/portfolio/olivier/menu-olivier-2017-3.jpg')" class="block group cursor-pointer">
-             <NuxtImg src="/images/portfolio/olivier/menu-olivier-2017-3.jpg" alt="Olivier Menu Mockup 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:33vw" />
+             <img src="/images/portfolio/olivier/menu-olivier-2017-3.jpg" alt="Olivier Menu Mockup 2" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
            </a>
            <a @click.prevent="toggleZoom('/images/portfolio/olivier/oliver-new-menu-22.jpg')" class="block group cursor-pointer">
-             <NuxtImg src="/images/portfolio/olivier/oliver-new-menu-22.jpg" alt="Olivier Menu Mockup 3" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:33vw" />
+             <img src="/images/portfolio/olivier/oliver-new-menu-22.jpg" alt="Olivier Menu Mockup 3" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
            </a>
          </div>
       </section>
       <section class="bg-[#444349] py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-12 rounded-lg shadow-inner"> <!-- Section 7 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
            <a @click.prevent="toggleZoom('/images/portfolio/olivier/olivier-wip-1.jpg')" class="block group cursor-pointer">
-             <NuxtImg src="/images/portfolio/olivier/olivier-wip-1.jpg" alt="Olivier Menu Work in Progress 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:50vw" />
+             <img src="/images/portfolio/olivier/olivier-wip-1.jpg" alt="Olivier Menu Work in Progress 1" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
            </a>
            <a @click.prevent="toggleZoom('/images/portfolio/olivier/types-menu-olivier-2017.jpg')" class="block group cursor-pointer">
-             <NuxtImg src="/images/portfolio/olivier/types-menu-olivier-2017.jpg" alt="Olivier Menu Types" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" format="webp" sizes="100vw md:50vw" />
+             <img src="/images/portfolio/olivier/types-menu-olivier-2017.jpg" alt="Olivier Menu Types" class="rounded-lg shadow-md w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
            </a>
         </div>
       </section>
@@ -216,12 +214,10 @@
           </div>
         </div>
         <div class="w-full md:w-2/3">
-          <NuxtImg
+          <img
             src="/images/portfolio/olivier/summer-menu-2.jpg"
             alt="Olivier Seasonal Summer Menu"
             class="w-full h-auto rounded-lg shadow-xl"
-            sizes="100vw md:67vw"
-            format="webp"
             loading="lazy"
           />
         </div>
@@ -248,15 +244,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import { NuxtImg } from '#components'; // Ensure NuxtImg is imported if not auto-imported
-
-// Define page meta
-useHead({
-  title: 'Olivier Restaurant Menu Design - Portfolio - Cinereo',
-  meta: [
-    { name: 'description', content: 'Elegant menu design for Olivier, a gourmet restaurant, featuring multiple versions and seasonal templates.' }
-  ]
-})
 
 // State for zoomed image
 const zoomedImageSrc = ref<string | null>(null);

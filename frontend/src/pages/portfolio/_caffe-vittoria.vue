@@ -172,16 +172,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
-// Define SEO meta data if needed using useHead
-useHead({
-  title: 'Caffè Vittoria Menu Design - Cinereo Portfolio',
-  meta: [
-    { name: 'description', content: 'Creative menu design for Caffè Vittoria, a beachside café in Atrani, Amalfi Coast.' }
-  ],
-})
-
-// Add any specific script logic here if required
+// useHead removed
 </script>
 
 <style scoped>
@@ -218,19 +209,10 @@ useHead({
    font-style: normal; /* Override italic if needed */
 }
 
-/* Ensure Raleway and Nunito fonts are loaded globally or import them here */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Raleway:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400&display=swap');
-
-h1, h2, h3, h4, h5, h6 {
+.font-raleway {
   font-family: 'Raleway', sans-serif;
 }
-
-body, p, span, a, div, blockquote /* Add other elements as needed */ {
+.font-nunito {
   font-family: 'Nunito', sans-serif;
-}
-
-/* Replicate specific styles if Tailwind doesn't cover them */
-blockquote {
-  /* Example: Add specific blockquote styling if needed */
 }
 </style>

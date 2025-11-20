@@ -5,14 +5,11 @@
     <header class="relative h-[350px] md:h-[450px] lg:h-[550px] xl:h-[650px] overflow-hidden">
        <!-- Replicating caffe-vittoria structure -->
        <div class="absolute inset-0 bg-black"> <!-- Container div like caffe-vittoria -->
-         <NuxtImg
+         <img
            src="/images/portfolio/moressa/header-bg.jpg"
            alt="La Moressa Menu Header Background"
            class="w-full h-full object-cover opacity-60"
-           sizes="100vw"
-           format="webp"
-           preload
-         ></NuxtImg>
+         />
        </div>
        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div> <!-- Re-added gradient overlay -->
        <!-- Text Content remains relative z-10 -->
@@ -60,12 +57,10 @@
             </p>
           </div>
           <div class="md:w-2/3 order-1 md:order-2">
-            <NuxtImg
+            <img
               src="/images/portfolio/moressa/la-moressa-italian-menu-2.jpg"
               alt="La Moressa Menu Mockup"
               class="w-full h-auto rounded-lg shadow-xl"
-              sizes="100vw md:67vw"
-              format="webp"
               loading="lazy"
             />
           </div>
@@ -144,10 +139,10 @@
         <!-- Section 6: Image Gallery -->
         <section>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <NuxtImg src="/images/portfolio/moressa/gallery-1.jpg" alt="Gallery Image 1 - Menu on table" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" format="webp" />
-            <NuxtImg src="/images/portfolio/moressa/gallery-2.jpg" alt="Gallery Image 2 - Cocktail menu" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" format="webp" />
-            <NuxtImg src="/images/portfolio/moressa/gallery-3.jpg" alt="Gallery Image 3 - Menu detail" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" format="webp" />
-            <NuxtImg src="/images/portfolio/moressa/gallery-4.jpg" alt="Gallery Image 4 - Pizza menu" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" format="webp" />
+            <img src="/images/portfolio/moressa/gallery-1.jpg" alt="Gallery Image 1 - Menu on table" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" />
+            <img src="/images/portfolio/moressa/gallery-2.jpg" alt="Gallery Image 2 - Cocktail menu" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" />
+            <img src="/images/portfolio/moressa/gallery-3.jpg" alt="Gallery Image 3 - Menu detail" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" />
+            <img src="/images/portfolio/moressa/gallery-4.jpg" alt="Gallery Image 4 - Pizza menu" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video sm:aspect-square lg:aspect-video" loading="lazy" />
           </div>
         </section>
 
@@ -163,12 +158,10 @@
            <div class="absolute inset-0 bg-black/40"></div>
            <div class="relative z-10 container mx-auto px-4 flex justify-center md:justify-end">
              <div class="w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4">
-                <NuxtImg
+                <img
                   src="/images/portfolio/moressa/qr-code.jpg"
                   alt="QR Code for La Moressa Menu"
                   class="rounded-lg shadow-2xl w-full h-auto aspect-square object-cover"
-                  sizes="75vw sm:50vw md:33vw lg:25vw"
-                  format="webp"
                   loading="lazy"
                 />
              </div>
@@ -178,12 +171,10 @@
         <!-- Section 9: Printed Menu Mockups -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-center">
            <div class="md:col-span-1">
-              <NuxtImg
+              <img
                 src="/images/portfolio/moressa/printed-menu-1.jpg"
                 alt="Printed Menu Mockup 1"
                 class="rounded-lg shadow-lg w-full h-auto"
-                sizes="100vw md:33vw"
-                format="webp"
                 loading="lazy"
               />
            </div>
@@ -193,12 +184,10 @@
               </h2>
            </div>
            <div class="md:col-span-1">
-              <NuxtImg
+              <img
                 src="/images/portfolio/moressa/printed-menu-2.jpg"
                 alt="Printed Menu Mockup 2"
                 class="rounded-lg shadow-lg w-full h-auto"
-                sizes="100vw md:33vw"
-                format="webp"
                 loading="lazy"
               />
            </div>
@@ -211,15 +200,7 @@
 </template>
 
 <script setup lang="ts">
-import { NuxtImg } from '#components'; // Ensure NuxtImg is imported if not auto-imported
-
 // Define page meta or other setup logic if needed
-useHead({
-  title: 'La Moressa Menu Design - Portfolio - Cinereo',
-  meta: [
-    { name: 'description', content: 'Design and photography for the digital and printable menu of La Moressa restaurant on the Amalfi Coast.' }
-  ]
-})
 </script>
 
 <style scoped>

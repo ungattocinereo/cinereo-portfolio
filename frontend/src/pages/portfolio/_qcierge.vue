@@ -25,7 +25,7 @@
         <!-- Overview -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:info" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Info class="w-7 h-7 mr-3 text-[#1436f5]" />
             Overview
           </h2>
           <p class="text-lg text-gray-700 leading-relaxed mb-4">
@@ -42,26 +42,26 @@
         <!-- The Core Idea -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:lightbulb" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Lightbulb class="w-7 h-7 mr-3 text-[#1436f5]" />
             The Core Idea
           </h2>
           <ul class="space-y-4">
             <li class="flex items-start">
-              <Icon name="lucide:user-check" class="w-6 h-6 mr-3 mt-1 text-green-600 flex-shrink-0" />
+              <UserCheck class="w-6 h-6 mr-3 mt-1 text-green-600 flex-shrink-0" />
               <div>
                 <h3 class="font-semibold text-lg">Guest Anonymity</h3>
                 <p class="text-gray-700">People often feel shy about directly asking for extra services or reporting minor problems. QCierge addresses this by providing a one-tap, no-hassle method.</p>
               </div>
             </li>
             <li class="flex items-start">
-              <Icon name="lucide:bell-ring" class="w-6 h-6 mr-3 mt-1 text-red-600 flex-shrink-0" />
+              <BellRing class="w-6 h-6 mr-3 mt-1 text-red-600 flex-shrink-0" />
               <div>
                 <h3 class="font-semibold text-lg">Immediate Assistance</h3>
                 <p class="text-gray-700">Once a request is made, hotel administrators see it instantly in their group chat. They can respond in person or fulfill the request behind the scenes.</p>
               </div>
             </li>
             <li class="flex items-start">
-              <Icon name="lucide:gift" class="w-6 h-6 mr-3 mt-1 text-purple-600 flex-shrink-0" />
+              <Gift class="w-6 h-6 mr-3 mt-1 text-purple-600 flex-shrink-0" />
               <div>
                 <h3 class="font-semibold text-lg">Reward Through Gratitude</h3>
                 <p class="text-gray-700">With a nod to gamification, each request is met with a simple but heartfelt “Thank You” message. It’s a small reward for helping the hotel maintain high standards.</p>
@@ -73,20 +73,20 @@
         <!-- How It Works -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:workflow" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Workflow class="w-7 h-7 mr-3 text-[#1436f5]" />
             How It Works
           </h2>
           <ol class="space-y-6">
             <li>
               <h3 class="font-semibold text-lg mb-2 flex items-center">
-                <Icon name="lucide:qr-code" class="w-5 h-5 mr-2 text-gray-600" />
+                <QrCode class="w-5 h-5 mr-2 text-gray-600" />
                 1. Scanning the Code
               </h3>
               <p class="text-gray-700 ml-7">Each room, suite, or common area (kitchen, bathroom) has a printed, laminated QR code. A quick scan with any smartphone camera launches the QCierge web interface—no downloads or installation required.</p>
             </li>
             <li>
               <h3 class="font-semibold text-lg mb-2 flex items-center">
-                <Icon name="lucide:mouse-pointer-click" class="w-5 h-5 mr-2 text-gray-600" />
+                <MousePointerClick class="w-5 h-5 mr-2 text-gray-600" />
                 2. Choosing a Request
               </h3>
               <p class="text-gray-700 ml-7 mb-2">Guests see concise options like “Change our shower towels,” “Please clean the room,” or even “Problem with the cat.”</p>
@@ -94,7 +94,7 @@
             </li>
             <li>
               <h3 class="font-semibold text-lg mb-2 flex items-center">
-                <Icon name="lucide:send" class="w-5 h-5 mr-2 text-gray-600" />
+                <Send class="w-5 h-5 mr-2 text-gray-600" />
                 3. Instant Notifications to Staff
               </h3>
               <p class="text-gray-700 ml-7 mb-2">Behind the scenes, the hotel’s staff or administration gets a real-time message in their dedicated group chat. The notification indicates which room or area submitted the request and what service is needed.</p>
@@ -106,7 +106,7 @@
         <!-- Philosophy & Gamification -->
         <section class="mb-12 md:mb-16 p-6 bg-blue-50 rounded-lg border border-blue-200">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:gamepad-2" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Gamepad2 class="w-7 h-7 mr-3 text-[#1436f5]" />
             Philosophy & Gamification
           </h2>
           <p class="text-lg text-gray-700 leading-relaxed mb-4">
@@ -124,7 +124,7 @@
         <!-- Technical Highlights -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:code-2" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Code2 class="w-7 h-7 mr-3 text-[#1436f5]" />
             Technical Highlights
           </h2>
           <p class="text-lg text-gray-700 leading-relaxed mb-4">
@@ -141,7 +141,7 @@
         <!-- Setting It Up -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:settings" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Settings class="w-7 h-7 mr-3 text-[#1436f5]" />
             Setting It Up for Your Property
           </h2>
           <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -150,7 +150,7 @@
           <ol class="space-y-6">
             <li>
               <h3 class="font-semibold text-lg mb-2 flex items-center">
-                <Icon name="lucide:link" class="w-5 h-5 mr-2 text-gray-600" />
+                <Link class="w-5 h-5 mr-2 text-gray-600" />
                 1. Get Your Short Links
               </h3>
               <p class="text-gray-700 ml-7 mb-1">Each room or apartment receives a unique short link (for example, qr.amalfi.day/r101 for Room 101).</p>
@@ -158,7 +158,7 @@
             </li>
             <li>
               <h3 class="font-semibold text-lg mb-2 flex items-center">
-                <Icon name="lucide:printer" class="w-5 h-5 mr-2 text-gray-600" />
+                <Printer class="w-5 h-5 mr-2 text-gray-600" />
                 2. Print the QR Codes
               </h3>
               <p class="text-gray-700 ml-7 mb-1">We provide ready-to-print QR codes that correspond to each link.</p>
@@ -166,7 +166,7 @@
             </li>
             <li>
               <h3 class="font-semibold text-lg mb-2 flex items-center">
-                <Icon name="lucide:map-pin" class="w-5 h-5 mr-2 text-gray-600" />
+                <MapPin class="w-5 h-5 mr-2 text-gray-600" />
                 3. Place Them Anywhere
               </h3>
               <p class="text-gray-700 ml-7 mb-1">Stick them on fridges, bathroom mirrors, bedside tables, or doors.</p>
@@ -175,7 +175,7 @@
             </li>
             <li>
               <h3 class="font-semibold text-lg mb-2 flex items-center">
-                <Icon name="lucide:message-square" class="w-5 h-5 mr-2 text-gray-600" />
+                <MessageSquare class="w-5 h-5 mr-2 text-gray-600" />
                 4. Receive Requests in Your Chat
               </h3>
               <p class="text-gray-700 ml-7 mb-1">Add the relevant staff (front desk, housekeepers, or anyone else) to a group chat or Telegram channel (or whichever messaging system you prefer).</p>
@@ -187,7 +187,7 @@
         <!-- Why QCierge Matters -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:thumbs-up" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <ThumbsUp class="w-7 h-7 mr-3 text-[#1436f5]" />
             Why QCierge Matters
           </h2>
           <ul class="space-y-3 list-disc list-inside text-lg text-gray-700">
@@ -201,7 +201,7 @@
         <!-- Where We Are Now -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:activity" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Activity class="w-7 h-7 mr-3 text-[#1436f5]" />
             Where We Are Now
           </h2>
           <p class="text-lg text-gray-700 leading-relaxed">
@@ -212,7 +212,7 @@
         <!-- Future Plans -->
         <section class="mb-12 md:mb-16">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:rocket" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Rocket class="w-7 h-7 mr-3 text-[#1436f5]" />
             Future Plans
           </h2>
           <ul class="space-y-3 list-disc list-inside text-lg text-gray-700">
@@ -226,7 +226,7 @@
         <!-- Get Involved -->
         <section class="mb-12 md:mb-16 p-6 bg-blue-50 rounded-lg border border-blue-200">
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:users" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Users class="w-7 h-7 mr-3 text-[#1436f5]" />
             Get Involved or Try It Yourself
           </h2>
           <p class="text-lg text-gray-700 leading-relaxed mb-4">
@@ -242,7 +242,7 @@
         <!-- Conclusion -->
         <section>
           <h2 class="text-3xl font-raleway font-black mb-6 flex items-center text-gray-900">
-            <Icon name="lucide:sparkles" class="w-7 h-7 mr-3 text-[#1436f5]" />
+            <Sparkles class="w-7 h-7 mr-3 text-[#1436f5]" />
             Conclusion
           </h2>
           <p class="text-lg text-gray-700 leading-relaxed">
@@ -256,28 +256,35 @@
 </template>
 
 <script setup lang="ts">
-// Assuming Nuxt Icon is installed and configured
-// If not, you might need to install it (`npm install nuxt-icon`) and add it to modules in nuxt.config.ts
-// Or import icons manually as SVG components
+import {
+  Info,
+  Lightbulb,
+  UserCheck,
+  BellRing,
+  Gift,
+  Workflow,
+  QrCode,
+  MousePointerClick,
+  Send,
+  Gamepad2,
+  Code2,
+  Settings,
+  Link,
+  Printer,
+  MapPin,
+  MessageSquare,
+  ThumbsUp,
+  Activity,
+  Rocket,
+  Users,
+  Sparkles
+} from 'lucide-vue-next';
 
-// Import Raleway font if not globally available
-// You might need to add this to your main CSS or Nuxt config
-// import '@fontsource/raleway/900.css';
-
-// Set page metadata
-useHead({
-  title: 'QCierge - Portfolio | Cinereo',
-  meta: [
-    { name: 'description', content: 'Portfolio page detailing the QCierge project - a simple QR code based concierge system for hospitality.' }
-  ]
-})
+// useHead removed, handled by Layout.astro
 </script>
 
 <style scoped>
-/* Add Raleway font-family if needed */
 .font-raleway {
   font-family: 'Raleway', sans-serif;
 }
-
-/* Add any other component-specific styles here if needed */
 </style>

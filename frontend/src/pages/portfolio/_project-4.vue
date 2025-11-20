@@ -161,15 +161,6 @@
 <script setup>
 import { ref } from 'vue';
 import VueEasyLightbox from 'vue-easy-lightbox';
-// import { NuxtImg } from '#components'; // Auto-imported
-
-// Define SEO meta data
-useHead({
-  title: 'Project 4: Le Palme Restaurant - Cinereo Portfolio',
-  meta: [
-    { name: 'description', content: 'Various design and photo projects for Le Palme Restaurant in Atrani, Amalfi Coast.' }
-  ],
-})
 
 // Gallery Images
 const galleryImages = ref([
@@ -178,7 +169,6 @@ const galleryImages = ref([
   '/images/portfolio/project-4/le-palme-photos-002.jpg',
   '/images/portfolio/project-4/le-palme-photos-004.jpg',
   '/images/portfolio/project-4/le-palme-photos-001.jpg',
-  // Add more images from the project if available/desired
 ]);
 
 // Lightbox State
