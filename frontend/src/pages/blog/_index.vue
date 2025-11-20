@@ -37,12 +37,5 @@
 
 <script setup>
 import { Mic, PenLine } from 'lucide-vue-next';
-import { useHead } from '@unhead/vue';
-
-useHead({
-  title: 'Blog - Cinereo',
-  meta: [
-    { name: 'description', content: 'Thoughts and articles by Gregory Smirnov.' }
-  ]
-})
+// useHead removed
 </script>
