@@ -125,10 +125,10 @@
           <div class="sm:w-1/2 mb-8 sm:mb-0">
             <h4 class="text-xl font-raleway font-bold mb-3">Design</h4>
             <p class="text-gray-700 font-nunito text-sm mb-4">Before moving to Italy I worked in Sochi first as a designer, then as a head of design department.</p>
-            <NuxtLink to="/portfolio" class="text-blue-600 hover:text-blue-800 font-raleway font-bold text-sm inline-flex items-center group">
+            <a href="/portfolio" class="text-blue-600 hover:text-blue-800 font-raleway font-bold text-sm inline-flex items-center group">
               <span class="w-4 h-0.5 bg-blue-600 mr-2"></span>
               My portfolio
-            </NuxtLink>
+            </a>
           </div>
           <div class="sm:w-1/2">
             <h4 class="text-xl font-raleway font-bold mb-3">Hospitality</h4>
@@ -171,6 +171,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Globe, MessageSquare, Pizza } from 'lucide-vue-next';
+import { useHead } from '@unhead/vue'; // Import useHead
 
 // --- Hero Image Tilt Effect ---
 const heroImage = ref(null);

@@ -8,10 +8,10 @@
         <h2 class="text-xl font-bold font-raleway mb-4 text-[#293036]">Main Pages</h2>
         <ul class="space-y-2 font-nunito">
           <li v-for="(link, index) in mainPages" :key="index">
-            <NuxtLink :to="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
+            <a :href="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
               <ChevronRight class="w-4 h-4 mr-1" />
               {{ link.name }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </div>
@@ -21,16 +21,16 @@
         <h2 class="text-xl font-bold font-raleway mb-4 text-[#293036]">Portfolio</h2>
         <ul class="space-y-2 font-nunito">
           <li>
-            <NuxtLink to="/portfolio" class="text-blue-600 hover:text-blue-800 flex items-center">
+            <a href="/portfolio" class="text-blue-600 hover:text-blue-800 flex items-center">
               <ChevronRight class="w-4 h-4 mr-1" />
               Portfolio Overview
-            </NuxtLink>
+            </a>
           </li>
           <li v-for="(link, index) in portfolioPages" :key="index">
-            <NuxtLink :to="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
+            <a :href="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
               <ChevronRight class="w-4 h-4 mr-1" />
               {{ link.name }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </div>
@@ -40,16 +40,16 @@
         <h2 class="text-xl font-bold font-raleway mb-4 text-[#293036]">Blog</h2>
         <ul class="space-y-2 font-nunito">
           <li>
-            <NuxtLink to="/blog" class="text-blue-600 hover:text-blue-800 flex items-center">
+            <a href="/blog" class="text-blue-600 hover:text-blue-800 flex items-center">
               <ChevronRight class="w-4 h-4 mr-1" />
               Blog Overview
-            </NuxtLink>
+            </a>
           </li>
           <li v-for="(link, index) in blogPages" :key="index">
-            <NuxtLink :to="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
+            <a :href="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
               <ChevronRight class="w-4 h-4 mr-1" />
               {{ link.name }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </div>
@@ -59,10 +59,10 @@
         <h2 class="text-xl font-bold font-raleway mb-4 text-[#293036]">Legal</h2>
         <ul class="space-y-2 font-nunito">
           <li v-for="(link, index) in legalPages" :key="index">
-            <NuxtLink :to="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
+            <a :href="link.path" class="text-blue-600 hover:text-blue-800 flex items-center">
               <ChevronRight class="w-4 h-4 mr-1" />
               {{ link.name }}
-            </NuxtLink>
+            </a>
           </li>
         </ul>
       </div>
@@ -82,6 +82,14 @@
 
 <script setup>
 import { ChevronRight, ExternalLink } from 'lucide-vue-next';
+import { useHead } from '@unhead/vue';
+
+useHead({
+  title: 'Sitemap - Cinereo',
+  meta: [
+    { name: 'description', content: 'Sitemap of Cinereo.it website.' }
+  ]
+})
 
 // Define the site structure
 const mainPages = [

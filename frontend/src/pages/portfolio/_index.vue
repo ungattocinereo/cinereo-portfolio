@@ -48,10 +48,10 @@
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
               {{ project.description }}
             </p>
-            <NuxtLink v-if="project.link.startsWith(&apos;/&apos;)" :to="project.link" class="text-sm flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium">
+            <a v-if="project.link.startsWith(&apos;/&apos;)" :href="project.link" class="text-sm flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium">
               <ExternalLink class="w-4 h-4 mr-1" />
               View Details
-            </NuxtLink>
+            </a>
             <a v-else :href="project.link" target="_blank" rel="noopener noreferrer" class="text-sm flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium">
               <ExternalLink class="w-4 h-4 mr-1" />
               Visit Project
@@ -109,10 +109,10 @@
              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">
                {{ project.description }}
              </p>
-             <NuxtLink v-if="project.link.startsWith(&apos;/&apos;)" :to="project.link" class="text-xs flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium">
+             <a v-if="project.link.startsWith(&apos;/&apos;)" :href="project.link" class="text-xs flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium">
                <ExternalLink class="w-3 h-3 mr-1" />
                View Details
-             </NuxtLink>
+             </a>
               <a v-else :href="project.link" target="_blank" rel="noopener noreferrer" class="text-xs flex items-center text-blue-600 dark:text-blue-400 hover:underline font-medium">
                <ExternalLink class="w-3 h-3 mr-1" />
                Visit Project
@@ -184,16 +184,8 @@ const otherProjects = [
   { id: 5, name: 'Caffè Vittoria Menu', description: 'Creative menu design for a beachside café in Atrani.', image: '/images/portfolio/caffe-vittoria/thumbnail.jpg', link: '/portfolio/caffe-vittoria' },
   { id: 6, name: 'La Moressa Menu', description: 'Design and photography for a restaurant menu on the Amalfi Coast.', image: '/images/portfolio/moressa/header-bg.jpg', link: '/portfolio/moressa' },
   { id: 7, name: 'Olivier Menu Design', description: 'Elegant menu design for a gourmet restaurant in Sochi.', image: '/images/portfolio/olivier/menu-olivier-2017-3.jpg', link: '/portfolio/olivier' },
-  // Add more projects here as needed
-  // { id: 5, name: 'Project 5', description: '...', image: '/images/placeholder.jpg', link: '#' },
-  // { id: 6, name: 'Project 6', description: '...', image: '/images/placeholder.jpg', link: '#' },
-  // { id: 7, name: 'Project 7', description: '...', image: '/images/placeholder.jpg', link: '#' },
-  // { id: 8, name: 'Project 8', description: '...', image: '/images/placeholder.jpg', link: '#' },
 ];
 
-// Note: For infinite scroll, you'd typically load `otherProjects` incrementally
-// based on scroll position, likely involving state management (e.g., useState)
-// and potentially API calls.
 // Attempt to play video on mount
 onMounted(() => {
   if (videoRef.value) {
@@ -225,34 +217,10 @@ onMounted(() => {
   animation-delay: 300ms;
 }
 
-/* Re-apply Raleway/Nunito locally if needed, though they should be global */
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&family=Nunito:wght@400;700&display=swap'); */
-
 .font-raleway {
   font-family: 'Raleway', sans-serif;
 }
 .font-nunito {
   font-family: 'Nunito', sans-serif;
 }
-
-/* Re-apply outline styles locally if needed, though they should be global */
-/*
-.text-outline-white {
-  -webkit-text-stroke-width: clamp(1px, 0.5vw, 4px);
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.95);
-  -webkit-text-fill-color: transparent;
-  color: white;
-  width: 100%;
-  display: inline-block;
-  transform: translateY(0.05em);
-}
-
-.text-outline-masked {
-  mask-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.1) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.1) 100%);
-  opacity: 0.95;
-  max-width: 100%;
-  overflow: visible;
-}
-*/
 </style>
