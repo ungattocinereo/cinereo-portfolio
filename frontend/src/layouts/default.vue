@@ -5,35 +5,35 @@
       <!-- Container back inside nav -->
       <nav class="container mx-auto px-4 py-3 flex justify-between items-center"> <!-- Restored container/padding -->
         <!-- Logo on the left -->
-        <NuxtLink to="/" class="flex items-center">
+        <a href="/" class="flex items-center">
           <LogoCinereo class="h-14 text-[#2A3238] dark:text-white" />
-        </NuxtLink>
+        </a>
 
         <!-- Navigation and Social Links on the right -->
         <div class="flex items-center space-x-6 mt-3"> <!-- Added mt-1 to push down slightly -->
           <!-- Main Navigation -->
           <div class="flex items-center space-x-4">
-            <NuxtLink
-              to="/portfolio"
+            <a
+              href="/portfolio"
               class="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-nunito text-sm font-medium"
             >
               <BriefcaseBusiness class="w-4 h-4 mr-1" />
               Portfolio
-            </NuxtLink>
-            <NuxtLink
-              to="/blog"
+            </a>
+            <a
+              href="/blog"
               class="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-nunito text-sm font-medium"
             >
               <ScrollText class="w-4 h-4 mr-1" />
               Blog
-            </NuxtLink>
-            <NuxtLink
-              to="/about"
+            </a>
+            <a
+              href="/about"
               class="flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-nunito text-sm font-medium"
             >
               <Cat class="w-4 h-4 mr-1" />
               About
-            </NuxtLink>
+            </a>
           </div>
 
           <!-- Divider -->
@@ -93,7 +93,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue';
 import ThemeToggle from '~/components/ThemeToggle.vue'; // Import ThemeToggle
 
 // Import logo component
-import LogoCinereo from '~/components/logos/logo-cinereo.svg?component';
+import LogoCinereo from '~/components/logos/logo-cinereo.svg';
 
 // Import AppFooter component
 import AppFooter from '~/components/AppFooter.vue';

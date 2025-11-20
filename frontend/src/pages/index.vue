@@ -22,14 +22,14 @@
             Specializing in creating elegant digital experiences that combine aesthetics with functionality.
           </p>
           <div class="flex flex-wrap gap-4 justify-center">
-            <NuxtLink to="/portfolio" class="bg-white text-[#293036] px-6 py-3 rounded-md font-nunito font-medium hover:bg-opacity-90 transition flex items-center">
+            <a href="/portfolio" class="bg-white text-[#293036] px-6 py-3 rounded-md font-nunito font-medium hover:bg-opacity-90 transition flex items-center">
               <Briefcase class="w-5 h-5 mr-2" />
               View Projects
-            </NuxtLink>
-            <NuxtLink to="/about#contact" class="border-2 border-white text-white px-6 py-3 rounded-md font-nunito font-medium hover:bg-white hover:bg-opacity-10 transition flex items-center">
+            </a>
+            <a href="/about#contact" class="border-2 border-white text-white px-6 py-3 rounded-md font-nunito font-medium hover:bg-white hover:bg-opacity-10 transition flex items-center">
               <MessageCircle class="w-5 h-5 mr-2" />
               Get in Touch
-            </NuxtLink>
+            </a>
           </div>
         </div>
       </div>
@@ -44,18 +44,18 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- QR Concierge Project -->
           <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-            <NuxtLink to="/portfolio/qcierge">
+            <a href="/portfolio/qcierge">
               <img src="/images/mockup-qrcierge.jpg" alt="QR Concierge Mockup" class="w-full h-48 object-cover" />
-            </NuxtLink>
+            </a>
             <div class="p-6">
               <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">QR Concierge</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito">
                 Digital concierge system using QR codes for hotels and tourism businesses.
               </p>
-              <NuxtLink to="/portfolio/qcierge" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+              <a href="/portfolio/qcierge" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
                 <ExternalLink class="w-4 h-4 mr-1" /> <!-- Consider changing icon if it's now an internal link -->
                 Visit Project
-              </NuxtLink>
+              </a>
             </div>
           </div>
           
@@ -91,11 +91,11 @@
         </div>
         
         <div class="mt-12 text-center">
-          <NuxtLink to="/portfolio" class="inline-flex items-center text-[#003dff] dark:text-[#3e87f8] font-medium hover:underline">
+          <a href="/portfolio" class="inline-flex items-center text-[#003dff] dark:text-[#3e87f8] font-medium hover:underline">
             <FolderOpen class="w-5 h-5 mr-2" />
             View All Projects
             <ArrowRight class="w-4 h-4 ml-1" />
-          </NuxtLink>
+          </a>
         </div>
       </div>
     </section>
@@ -189,41 +189,41 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Blog Post 1 -->
           <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <NuxtLink to="/blog/this-website-was-written-by-voice">
+            <a href="/blog/this-website-was-written-by-voice">
               <div class="h-48 bg-gray-200 dark:bg-gray-700 rounded-t-lg flex items-center justify-center">
                 <Lightbulb class="w-40 h-40 text-[#1436f5] pointer-events-none" />
               </div>
-            </NuxtLink>
+            </a>
             <div class="p-6">
               <div class="text-sm text-gray-500 dark:text-gray-400 mb-2 font-nunito">April 4, 2025</div>
               <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">This Website Was Written by Voice</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito line-clamp-3">
                 Discover how this website was built entirely using voice commands and AI, a journey from WordPress to a modern, lightweight solution.
               </p>
-              <NuxtLink to="/blog/this-website-was-written-by-voice" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+              <a href="/blog/this-website-was-written-by-voice" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
                 <BookOpen class="w-4 h-4 mr-1" />
                 Read Article
-              </NuxtLink>
+              </a>
             </div>
           </div>
           
           <!-- Blog Post 2 -->
           <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <NuxtLink to="/blog/voice-test-post">
+            <a href="/blog/voice-test-post">
               <div class="h-48 bg-gray-200 dark:bg-gray-700 rounded-t-lg flex items-center justify-center">
                 <Mic class="w-40 h-40 text-[#1436f5] pointer-events-none" />
               </div>
-            </NuxtLink>
+            </a>
             <div class="p-6">
               <div class="text-sm text-gray-500 dark:text-gray-400 mb-2 font-nunito">March 31, 2025</div>
               <h3 class="text-xl font-raleway font-bold mb-2 text-[#293036] dark:text-white">Testing the Waters: My First Voice-Powered Post</h3>
               <p class="text-gray-600 dark:text-gray-300 mb-4 font-nunito line-clamp-3">
                 A test blog post created using voice commands and AI assistance.
               </p>
-              <NuxtLink to="/blog/voice-test-post" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
+              <a href="/blog/voice-test-post" class="text-[#003dff] dark:text-[#3e87f8] font-medium flex items-center hover:underline">
                 <BookOpen class="w-4 h-4 mr-1" />
                 Read Article
-              </NuxtLink>
+              </a>
             </div>
           </div>
           
@@ -234,10 +234,10 @@
               <p class="mb-6 font-nunito">
                 Check out all articles in my blog covering web development, photography, and hospitality.
               </p>
-              <NuxtLink to="/blog" class="bg-white text-[#003dff] px-6 py-3 rounded-md font-nunito font-medium hover:bg-opacity-90 transition inline-flex items-center">
+              <a href="/blog" class="bg-white text-[#003dff] px-6 py-3 rounded-md font-nunito font-medium hover:bg-opacity-90 transition inline-flex items-center">
                 <BookOpen class="w-5 h-5 mr-2" />
                 Visit the Blog
-              </NuxtLink>
+              </a>
             </div>
           </div>
         </div>
@@ -251,10 +251,10 @@
         <p class="text-lg max-w-2xl mx-auto mb-8 font-nunito">
           Have a project in mind or need professional services? Get in touch and let's create something amazing.
         </p>
-        <NuxtLink to="/about#contact" class="bg-[#003dff] hover:bg-[#162cf1] text-white px-8 py-4 rounded-md font-nunito font-medium transition inline-flex items-center">
+        <a href="/about#contact" class="bg-[#003dff] hover:bg-[#162cf1] text-white px-8 py-4 rounded-md font-nunito font-medium transition inline-flex items-center">
           <MessageCircle class="w-5 h-5 mr-2" />
           Contact Me
-        </NuxtLink>
+        </a>
       </div>
     </section>
   </div>
@@ -265,8 +265,6 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import {
   Briefcase,
   MessageCircle,
-  // QrCode, // Removed unused import
-  // Globe,  // Removed unused import
   Camera,
   ExternalLink,
   Image,
@@ -275,200 +273,18 @@ import {
   Code,
   Palette,
   Hotel,
-  Lightbulb, // Added for blog post 1
-  Mic,       // Added for blog post 2
+  Lightbulb,
+  Mic,
   BookOpen
 } from 'lucide-vue-next';
 
-// We'll load tsParticles dynamically in onMounted
-
 // Import Current Work Logos
-import Amalfiday2Logo from '~/components/logos/Amalfiday2Logo.vue'; // Import new logo
+import Amalfiday2Logo from '~/components/logos/Amalfiday2Logo.vue'; 
 import AtraniruLogo from '~/components/logos/AtraniruLogo.vue';
 import AlextioneLogo from '~/components/logos/AlextioneLogo.vue';
 
-// Particle configuration for Hero Section
-const heroParticlesOptions = ref({
-  fullScreen: {
-    enable: false // Confine particles to the hero section container
-  },
-  background: {
-    color: {
-      value: 'transparent' // Use the section's gradient background
-    }
-  },
-  particles: {
-    number: {
-      value: 800, // Increase slightly for visibility during debug
-      density: {
-        enable: true,
-        area: 800 // Density area remains the same, leading to much higher visual density
-      }
-    },
-    color: {
-      value: "#ffffff" // White particles
-    },
-    shape: {
-      type: "circle"
-    },
-    opacity: {
-      value: { min: 0.04, max: 0.4 }, // Subtle and varying opacity
-      random: true,
-      animation: {
-        enable: true,
-        speed: 0.5,
-        minimumValue: 0.1,
-        sync: false
-      }
-    },
-    size: {
-      value: { min: 0.05, max: 2 }, // Very small particles
-      random: true,
-      animation: {
-        enable: false, // Disable size animation for consistency with small size
-        // speed: 1, // Not needed if disabled
-        // minimumValue: 0.5, // Not needed if disabled
-        sync: false
-      }
-    },
-    move: {
-      enable: true,
-      speed: 1, // Base speed, path generator might override
-      direction: "none", // Path will dictate direction
-      random: false, // Path generator handles initial randomness/direction
-      straight: false,
-      outModes: {
-        default: "out" // Change back to 'out' to prevent immediate destruction
-      },
-      attract: {
-          enable: false, // Keep attract disabled
-          rotateX: 600,
-          rotateY: 1200
-      },
-      // --- Path Generator Configuration ---
-      path: {
-        enable: true,
-        delay: { value: 0 }, // Start immediately
-        // SVG path: Left-mid -> Curve under center -> Swirl right-mid
-        // Simplified path for debugging: Straight horizontal line
-        path: "M 0 50 L 100 50",
-        clamp: false, // Allow particles to leave the canvas after path
-        generator: "svgPathGenerator", // Use the SVG path generator
-        options: { // Options specific to the path generator
-          loop: true, // Loop the path for debugging visibility
-          // Noise removed for debugging
-          // Control speed along the path (adjust as needed)
-          velocity: 1 // Slow down path movement significantly
-        }
-      }
-      // --- End Path Generator Configuration ---
-    },
-    links: {
-        enable: false // No lines
-    }
-  },
-  interactivity: {
-    detectsOn: "window", // Detect mouse events on the window/section area
-    events: {
-      onHover: {
-        enable: true,
-        mode: "repulse" // Gently push particles away on hover
-      },
-      onClick: {
-        enable: false // No click effects
-      },
-      resize: true
-    },
-    modes: {
-      repulse: {
-        distance: 80, // Interaction distance
-        duration: 0.4,
-        factor: 30, // How strongly they are repulsed
-        speed: 1,
-        maxSpeed: 5,
-        easing: "ease-out-quad"
-      },
-      bubble: { // Alternative hover effect (optional)
-        distance: 100,
-        size: 5,
-        duration: 2,
-        opacity: 0.8
-      }
-    }
-  },
-  detectRetina: true
-});
-
-// Initialize particles on the client side after the component is mounted
-onMounted(async () => {
-  // Ensure this runs only on the client
-  if (process.client) {
-    try {
-      // Access the globally provided tsParticles instance from the plugin
-      const nuxtApp = useNuxtApp();
-      const tsParticles = nuxtApp.$tsParticles;
-
-      if (!tsParticles) {
-        console.error("tsParticles instance not available from plugin.");
-        return;
-      }
-
-      // Check if the container exists
-      const container = document.getElementById("hero-particles");
-      if (!container) {
-        console.error("Particles container not found in DOM");
-        return;
-      }
-
-      // Load the particles configuration using the global instance
-      const particlesInstance = await tsParticles.load({
-        id: "hero-particles", // ID of the container div
-        options: heroParticlesOptions.value,
-      });
-
-      if (particlesInstance) {
-        console.log("Particles initialized successfully using plugin instance", particlesInstance);
-      } else {
-        console.error("Failed to initialize particles: No instance returned");
-      }
-    } catch (error) {
-      console.error("Failed to initialize particles:", error);
-    }
-  }
-});
-
-// Cleanup particles on component unmount
-onBeforeUnmount(async () => {
-  if (process.client) {
-    try {
-      // Access the globally provided tsParticles instance from the plugin
-      const nuxtApp = useNuxtApp();
-      const tsParticles = nuxtApp.$tsParticles;
-
-      if (!tsParticles) {
-        console.error("tsParticles instance not available for cleanup.");
-        return;
-      }
-
-      // Find the specific tsparticles instance by its container ID
-      const instances = tsParticles.dom(); // Get all instances managed by the engine
-      if (instances) {
-        const instance = instances.find(i => i.id === "hero-particles");
-        if (instance) {
-          // Destroy the instance to free up resources
-          await instance.destroy();
-          console.log("Particles instance destroyed successfully");
-        } else {
-          console.log("No particles instance found with ID 'hero-particles' to destroy");
-        }
-      } else {
-        console.log("No particles instances found in the DOM to destroy");
-      }
-    } catch (error) {
-      console.error("Failed to cleanup particles:", error);
-    }
-  }
-});
+// We'll ignore particle logic for now to check build, or remove if not needed in Astro transition first step.
+// To keep it simple let's comment out particle logic for a moment or adapt it later.
 </script>
 
 <style>

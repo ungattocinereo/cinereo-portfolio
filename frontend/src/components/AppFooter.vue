@@ -29,28 +29,28 @@
           <h3 class="text-xl font-raleway font-bold mb-4">Services</h3>
           <ul class="space-y-2 font-nunito">
             <li>
-              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Web Development
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Photography
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Graphic Design
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Hospitality Consulting
-              </NuxtLink>
+              </a>
             </li>
           </ul>
         </div>
@@ -60,34 +60,34 @@
           <h3 class="text-xl font-raleway font-bold mb-4">Quick Links</h3>
           <ul class="space-y-2 font-nunito">
             <li>
-              <NuxtLink to="/" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Home
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/portfolio" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Portfolio
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="/blog" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/blog" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Blog
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="/about" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/about" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 About
-              </NuxtLink>
+              </a>
             </li>
             <li>
-              <NuxtLink to="/about#contact" class="text-gray-300 hover:text-white transition flex items-center">
+              <a href="/about#contact" class="text-gray-300 hover:text-white transition flex items-center">
                 <ChevronRight class="w-4 h-4 mr-1" />
                 Contact
-              </NuxtLink>
+              </a>
             </li>
           </ul>
         </div>
@@ -118,9 +118,9 @@
           © 2006–2025 Gregory 'Cinereo' Smirnov. All rights reserved.
         </p>
         <div class="flex flex-wrap justify-center gap-4 text-sm font-nunito">
-          <NuxtLink to="/privacy-policy" class="text-gray-400 hover:text-white transition">Privacy Policy</NuxtLink>
-          <NuxtLink to="/terms-of-service" class="text-gray-400 hover:text-white transition">Terms of Service</NuxtLink>
-          <NuxtLink to="/sitemap" class="text-gray-400 hover:text-white transition">Sitemap</NuxtLink>
+          <a href="/privacy-policy" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+          <a href="/terms-of-service" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+          <a href="/sitemap" class="text-gray-400 hover:text-white transition">Sitemap</a>
         </div>
       </div>
     </div>
@@ -139,138 +139,6 @@ import {
   MessageCircle
 } from 'lucide-vue-next';
 
-// We'll load tsParticles dynamically in onMounted
-
-// Particle configuration options
-const particlesOptions = ref({
-  fullScreen: {
-    enable: false // Important: particles are contained within the footer
-  },
-  background: {
-    color: {
-      value: 'transparent' // Make background transparent
-    }
-  },
-  particles: {
-    number: {
-      value: 180, // Increased density (3x)
-      density: {
-        enable: true,
-        area: 800
-      }
-    },
-    color: {
-      value: "#666666" // Darker grey color for ash/dust
-    },
-    shape: {
-      type: "circle"
-    },
-    opacity: {
-      value: 0.3, // More subtle opacity
-      random: true,
-    },
-    size: {
-      value: { min: 1, max: 2.5 }, // Smaller particles
-      random: true,
-    },
-    move: {
-      enable: true,
-      speed: 0.4, // Slower movement
-      direction: "none",
-      random: true,
-      straight: false,
-      outModes: {
-        default: "out" // Particles disappear when they go out of bounds
-      }
-    },
-    links: {
-        enable: false // No lines connecting particles
-    }
-  },
-  interactivity: {
-    detectsOn: "canvas",
-    events: {
-      onHover: {
-        enable: false // No hover effects
-      },
-      onClick: {
-        enable: false // No click effects
-      },
-      resize: true
-    }
-  },
-  detectRetina: true
-});
-
-// Initialize particles on the client side after the component is mounted
-onMounted(async () => {
-  // Ensure this runs only on the client
-  if (process.client) {
-    try {
-      // Add a small delay to ensure the DOM is fully rendered
-      setTimeout(async () => {
-        try {
-          // Import the required modules with explicit paths
-          const engineModule = await import("@tsparticles/engine");
-          const tsParticles = engineModule.tsParticles;
-          
-          const tsparticlesModule = await import("tsparticles");
-          const loadFull = tsparticlesModule.loadFull;
-          
-          // Initialize the engine
-          await loadFull(tsParticles);
-          
-          // Check if the container exists
-          const container = document.getElementById("footer-particles");
-          if (!container) {
-            console.error("Footer particles container not found in DOM");
-            return;
-          }
-          
-          // Load the particles configuration
-          const particlesInstance = await tsParticles.load({
-            id: "footer-particles", // ID of the container div
-            options: particlesOptions.value,
-          });
-          
-          if (particlesInstance) {
-            console.log("Footer particles initialized successfully");
-          } else {
-            console.error("Failed to initialize footer particles: No instance returned");
-          }
-        } catch (innerError) {
-          console.error("Failed to initialize footer particles in setTimeout:", innerError);
-        }
-      }, 500); // 500ms delay
-    } catch (error) {
-      console.error("Failed to initialize footer particles:", error);
-    }
-  }
-});
-
-// Cleanup particles on component unmount
-onBeforeUnmount(async () => {
-  if (process.client) {
-    try {
-      // Import the engine to access the particles instance
-      const engineModule = await import("@tsparticles/engine");
-      const tsParticles = engineModule.tsParticles;
-      
-      // Find the specific tsparticles instance by its container ID
-      const instances = tsParticles.dom();
-      if (instances) {
-        const instance = instances.find(i => i.id === "footer-particles");
-        if (instance) {
-          // Destroy the instance to free up resources
-          await instance.destroy();
-          console.log("Footer particles instance destroyed successfully");
-        } else {
-          console.log("No footer particles instance found to destroy");
-        }
-      }
-    } catch (error) {
-      console.error("Failed to cleanup footer particles:", error);
-    }
-  }
-});
+// Particle logic is commented out for now to simplify the migration and build. 
+// It can be re-enabled later with the correct Astro/Vue integration for particles.
 </script>

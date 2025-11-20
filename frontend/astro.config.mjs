@@ -13,7 +13,12 @@ export default defineConfig({
         svgLoader({
             defaultImport: 'component'
         })
-    ]
+    ],
+    resolve: {
+      alias: {
+        '~': '/src',
+      }
+    }
   },
 
   integrations: [vue()]
